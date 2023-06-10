@@ -1,0 +1,94 @@
+CREAR COMPONENTE ANGLAR
+ng g c "nombre" 
+
+SE TIENE QUE LLAMAR A LISTADO.COMPONENT.TS
+import { HttpClient } from '@angular/common/http';
+
+constructor(private http: HttpClient){
+    let url_eventos = 'http://localhost:8000/api/eventos/listar';
+    
+    
+this.http.get(url_eventos)    "ESTO ES PARA GENERAR EL USO "
+
+
+//   
+  constructor(private http: HttpClient){
+    let url_eventos = 'http://localhost:8000/api/eventos/listar';
+    this.http.get(url_eventos).subscribe(
+      (data : any) => {
+        this.eventos = data;
+      }
+    )
+  }
+
+//
+
+  
+  
+  
+  
+    HTML LOGIN "LISTADO.COMPONENT.HTML"
+    <section>
+    <div>
+        <h2>Listado 1</h2>
+        <p>Direccion</p>
+        <a href="#">mas indo</a>
+    </div>
+
+    <div>
+        <h2>Listado 1</h2>
+        <p>Direccion</p>
+        <a href="#">Mas indo</a>
+    </div>
+    
+    <div>
+        <h2>Listado</h2>
+        <p>Direccion</p>
+        <a href="#">Mas indo</a>
+    </div>
+</section>
+    
+    
+    
+    
+  //HTM INICIO DE SESEION// DESDE LOGIN.COMPONENT.HTML
+    
+    <h1>Iniciar Sesion</h1>
+<label for="">Correo Electronico</label>
+<input type="text" name="login"><br>
+
+<br>
+
+<label>Contraseña</label> <br>
+<input type="password" name="contrasena"> <br>
+
+<br>
+<button>ingresar</button>
+
+
+br= para abajo
+
+
+
+
+
+
+<h1>Iniciar Sesion</h1>
+<form #f="ngForm" (ngSubmit)="enviar(f)">
+
+
+<label for="">Correo Electronico</label> <BR>
+<input type="text" name="login"><br>
+
+<br>
+
+<label>Contraseña</label> <br>
+<input type="password" name="contrasena"> <br>
+
+<br>
+<button>ingresar</button>
+
+
+    
+    
+    
